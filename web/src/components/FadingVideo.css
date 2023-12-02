@@ -1,0 +1,22 @@
+.video-container {
+  position: absolute;
+  top: 60px; /* Adjust this value based on your menu bar's height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0; /* Start hidden */
+  transition: opacity 2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container.visible {
+  opacity: 1; /* Fade in */
+}
+
+video {
+  width: 100%; /* Full width */
+  height: calc(100% - 60px); /* Full height minus the menu bar */
+  object-fit: cover; /* This will ensure the aspect ratio is maintained */
+}
